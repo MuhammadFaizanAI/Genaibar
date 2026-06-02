@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genaibar</title>
+  <link rel="stylesheet" href="panel.css" />
+</head>
+<body>
+<div class="app">
+
+  <!-- ═══ TOPBAR ═══ -->
+  <header class="topbar">
+    <div class="tabs-scroll" id="tabsScroll">
+      <div class="tabs" id="tabs"></div>
+    </div>
+
+    <div class="topbar-actions">
+      <!-- Screenshot buttons -->
+      <button class="icon-btn" id="screenshotBtn" title="Full screenshot (Alt+Shift+S)">
+        <svg viewBox="-2.4 -2.4 28.8 28.8" fill="currentColor">
+          <path d="M2,7V5A3,3,0,0,1,5,2H7A1,1,0,0,1,7,4H5A1,1,0,0,0,4,5V7A1,1,0,0,1,2,7ZM2,19a3,3,0,0,0,3,3H7a1,1,0,0,0,0-2H5a1,1,0,0,1-1-1V17a1,1,0,0,0-2,0Zm20-2a1,1,0,0,0-2,0v2a1,1,0,0,1-1,1H17a1,1,0,0,0,0,2h2a3,3,0,0,0,3-3ZM22,5a3,3,0,0,0-3-3H17a1,1,0,0,0,0,2h2a1,1,0,0,1,1,1V7a1,1,0,0,0,2,0Z"/>
+        </svg>
+      </button>
+      <button class="icon-btn" id="regionBtn" title="Region screenshot (Alt+Shift+R)">
+        <svg viewBox="0 0 48 48" fill="currentColor">
+          <path d="M26,39H22a1,1,0,0,1,0-2h4a1,1,0,0,1,0,2Z"/>
+          <path d="M26,11H22a1,1,0,0,1,0-2h4a1,1,0,0,1,0,2Z"/>
+          <path d="M38,27a1,1,0,0,1-1-1V22a1,1,0,0,1,2,0v4A1,1,0,0,1,38,27Z"/>
+          <path d="M10,27a1,1,0,0,1-1-1V22a1,1,0,0,1,2,0v4A1,1,0,0,1,10,27Z"/>
+          <path d="M38,39H30a1,1,0,1,1,0-2h7V30a1,1,0,0,1,2,0v8A1,1,0,0,1,38,39Z"/>
+          <path d="M38,18.92a1,1,0,0,1-1-1V11H29.76a1,1,0,0,1,0-2H38a1,1,0,0,1,1,1v7.92A1,1,0,0,1,38,18.92Z"/>
+          <path d="M10,18.92a1,1,0,0,1-1-1V10a1,1,0,0,1,1-1h8.1a1,1,0,0,1,0,2H11v6.92A1,1,0,0,1,10,18.92Z"/>
+          <path d="M18.07,39H10a1,1,0,0,1-1-1V30a1,1,0,1,1,2,0v7h7.07a1,1,0,0,1,0,2Z"/>
+          <path d="M38,44a1,1,0,0,1-1-1V38a1,1,0,0,1,2,0v5A1,1,0,0,1,38,44Z"/>
+          <path d="M43,39H38a1,1,0,0,1,0-2h5a1,1,0,0,1,0,2Z"/>
+        </svg>
+      </button>
+
+      <div class="topbar-divider"></div>
+
+      <!-- History — always visible -->
+      <button class="icon-btn" id="historyBtn" title="Session history">
+        <svg viewBox="0 0 16 16" fill="currentColor">
+          <path d="M3.05 4.75a.7.7 0 01.7-.7h3.5a.7.7 0 110 1.4h-3.5a.7.7 0 01-.7-.7zM3.75 7.05a.7.7 0 100 1.4h2.5a.7.7 0 100-1.4h-2.5z"/>
+          <path fill-rule="evenodd" d="M0 3.25A2.25 2.25 0 012.25 1h6.5c.883 0 1.648.51 2.016 1.25h.984c.698 0 1.3.409 1.582 1h.918c.966 0 1.75.784 1.75 1.75v6a1.75 1.75 0 01-1.75 1.75h-.918c-.281.591-.884 1-1.582 1h-.984A2.25 2.25 0 018.75 15h-6.5A2.25 2.25 0 010 12.75v-9.5zm13.5 8h.75a.25.25 0 00.25-.25V5a.25.25 0 00-.25-.25h-.75v6.5zm-2.5 1v-8.5h.75A.25.25 0 0112 4v8a.25.25 0 01-.25.25H11zM2.25 2.5a.75.75 0 00-.75.75v9.5c0 .414.336.75.75.75h6.5a.75.75 0 00.75-.75v-9.5a.75.75 0 00-.75-.75h-6.5z" clip-rule="evenodd"/>
+        </svg>
+      </button>
+
+      <!-- Prompt library -->
+      <button class="icon-btn" id="promptsBtn" title="Prompt library">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+        </svg>
+      </button>
+
+      <div class="topbar-divider"></div>
+
+      <!-- Settings -->
+      <button class="icon-btn" id="settingsBtn" title="Settings">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.3 7.58H15.72c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h5.58c.39 0 .7.31.7.7s-.31.7-.7.7ZM6.42 7.58H2.7c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h3.72c.39 0 .7.31.7.7s-.32.7-.7.7ZM10.14 10.83a3.95 3.95 0 100-7.9 3.95 3.95 0 000 7.9ZM21.3 17.81h-3.72c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h3.72c.39 0 .7.31.7.7s-.31.7-.7.7ZM8.28 17.81H2.7c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h5.58c.39 0 .7.31.7.7s-.32.7-.7.7ZM13.86 21.07a3.95 3.95 0 100-7.9 3.95 3.95 0 000 7.9Z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══ HISTORY PANEL ═══ -->
+  <div class="slide-panel hidden" id="historyPanel">
+    <div class="slide-panel-header">
+      <div class="slide-panel-title">
+        <svg viewBox="0 0 16 16" fill="currentColor" style="width:13px;height:13px">
+          <path d="M3.05 4.75a.7.7 0 01.7-.7h3.5a.7.7 0 110 1.4h-3.5a.7.7 0 01-.7-.7zM3.75 7.05a.7.7 0 100 1.4h2.5a.7.7 0 100-1.4h-2.5z"/>
+          <path fill-rule="evenodd" d="M0 3.25A2.25 2.25 0 012.25 1h6.5c.883 0 1.648.51 2.016 1.25h.984c.698 0 1.3.409 1.582 1h.918c.966 0 1.75.784 1.75 1.75v6a1.75 1.75 0 01-1.75 1.75h-.918c-.281.591-.884 1-1.582 1h-.984A2.25 2.25 0 018.75 15h-6.5A2.25 2.25 0 010 12.75v-9.5zm13.5 8h.75a.25.25 0 00.25-.25V5a.25.25 0 00-.25-.25h-.75v6.5zm-2.5 1v-8.5h.75A.25.25 0 0112 4v8a.25.25 0 01-.25.25H11zM2.25 2.5a.75.75 0 00-.75.75v9.5c0 .414.336.75.75.75h6.5a.75.75 0 00.75-.75v-9.5a.75.75 0 00-.75-.75h-6.5z" clip-rule="evenodd"/>
+        </svg>
+        Session History
+      </div>
+      <div class="slide-panel-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="image">Images</button>
+        <button class="filter-btn" data-filter="text">Text</button>
+      </div>
+      <button class="clear-btn" id="clearHistoryBtn">Clear</button>
+    </div>
+    <div class="history-scroll" id="historyScroll">
+      <div class="history-content" id="historyContent"></div>
+    </div>
+  </div>
+
+  <!-- ═══ PROMPTS PANEL ═══ -->
+  <div class="slide-panel hidden" id="promptsPanel">
+    <div class="slide-panel-header">
+      <div class="slide-panel-title">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:13px;height:13px">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+        </svg>
+        Prompt Library
+      </div>
+      <button class="manage-btn" id="managePromptsBtn">+ Manage</button>
+    </div>
+    <div class="prompts-list" id="promptsList"></div>
+  </div>
+
+  <!-- ═══ IFRAME AREA ═══ -->
+  <main class="iframe-area" id="iframeArea">
+    <div class="empty-state" id="emptyState" style="display:none">
+      <div class="empty-icon">
+        <svg viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="22" stroke="#7c3aed" stroke-width="1.5"/>
+          <path d="M16 24h16M24 16v16" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p class="empty-title">No LLMs added yet</p>
+      <p class="empty-sub">Open Settings to add your first AI assistant</p>
+      <button class="btn-primary" id="emptySettingsBtn">Open Settings</button>
+    </div>
+
+    <!-- Paste overlay -->
+    <div class="paste-overlay hidden" id="pasteOverlay">
+      <div class="paste-card">
+        <div class="paste-ripple"></div>
+        <svg class="paste-svg" viewBox="0 0 24 24" fill="none">
+          <rect x="8" y="4" width="12" height="16" rx="2" stroke="#a78bfa" stroke-width="1.5"/>
+          <path d="M8 8H5a1 1 0 00-1 1v11a1 1 0 001 1h11a1 1 0 001-1v-3" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="paste-title" id="pasteTitle">Pasting…</div>
+        <div class="paste-sub">Or click the LLM input and press <kbd>Ctrl+V</kbd></div>
+        <div class="paste-track"><div class="paste-bar" id="pasteBar"></div></div>
+        <div class="paste-dismiss">Click anywhere to dismiss</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══ STATUS BAR ═══ -->
+  <div class="status-bar" id="statusBar">
+    <span id="statusText"></span>
+    <button class="open-tab-btn" id="openTabBtn">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+      Open in tab
+    </button>
+  </div>
+
+  <!-- ═══ SCREENSHOT OVERLAY (manual only) ═══ -->
+  <div class="ss-overlay hidden" id="ssOverlay">
+    <div class="ss-header">
+      <div class="ss-header-left">
+        <svg viewBox="-2.4 -2.4 28.8 28.8" fill="currentColor" style="width:14px;height:14px;color:#a78bfa">
+          <path d="M2,7V5A3,3,0,0,1,5,2H7A1,1,0,0,1,7,4H5A1,1,0,0,0,4,5V7A1,1,0,0,1,2,7ZM2,19a3,3,0,0,0,3,3H7a1,1,0,0,0,0-2H5a1,1,0,0,1-1-1V17a1,1,0,0,0-2,0Zm20-2a1,1,0,0,0-2,0v2a1,1,0,0,1-1,1H17a1,1,0,0,0,0,2h2a3,3,0,0,0,3-3ZM22,5a3,3,0,0,0-3-3H17a1,1,0,0,0,0,2h2a1,1,0,0,1,1,1V7a1,1,0,0,0,2,0Z"/>
+        </svg>
+        Screenshot
+        <span class="ss-badge" id="ssDimsBadge"></span>
+      </div>
+      <div class="ss-header-right">
+        <button class="icon-btn sm" id="ssRetakeBtn" title="Retake">
+          <svg viewBox="-2.4 -2.4 28.8 28.8" fill="currentColor"><path d="M2,7V5A3,3,0,0,1,5,2H7A1,1,0,0,1,7,4H5A1,1,0,0,0,4,5V7A1,1,0,0,1,2,7ZM2,19a3,3,0,0,0,3,3H7a1,1,0,0,0,0-2H5a1,1,0,0,1-1-1V17a1,1,0,0,0-2,0Zm20-2a1,1,0,0,0-2,0v2a1,1,0,0,1-1,1H17a1,1,0,0,0,0,2h2a3,3,0,0,0,3-3ZM22,5a3,3,0,0,0-3-3H17a1,1,0,0,0,0,2h2a1,1,0,0,1,1,1V7a1,1,0,0,0,2,0Z"/></svg>
+        </button>
+        <button class="icon-btn sm" id="ssHistBtn" title="History">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.05 4.75a.7.7 0 01.7-.7h3.5a.7.7 0 110 1.4h-3.5a.7.7 0 01-.7-.7zM3.75 7.05a.7.7 0 100 1.4h2.5a.7.7 0 100-1.4h-2.5z"/><path fill-rule="evenodd" d="M0 3.25A2.25 2.25 0 012.25 1h6.5c.883 0 1.648.51 2.016 1.25h.984c.698 0 1.3.409 1.582 1h.918c.966 0 1.75.784 1.75 1.75v6a1.75 1.75 0 01-1.75 1.75h-.918c-.281.591-.884 1-1.582 1h-.984A2.25 2.25 0 018.75 15h-6.5A2.25 2.25 0 010 12.75v-9.5zm13.5 8h.75a.25.25 0 00.25-.25V5a.25.25 0 00-.25-.25h-.75v6.5zm-2.5 1v-8.5h.75A.25.25 0 0112 4v8a.25.25 0 01-.25.25H11zM2.25 2.5a.75.75 0 00-.75.75v9.5c0 .414.336.75.75.75h6.5a.75.75 0 00.75-.75v-9.5a.75.75 0 00-.75-.75h-6.5z" clip-rule="evenodd"/></svg>
+        </button>
+        <button class="icon-btn sm" id="ssCloseBtn" title="Close">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="ss-preview"><img id="ssImage" src="" alt="Screenshot" draggable="false"/></div>
+
+    <div class="ss-resize-row">
+      <span class="ss-resize-label">Resize</span>
+      <div class="ss-presets">
+        <button class="preset-sz active" data-scale="1">100%</button>
+        <button class="preset-sz" data-scale="0.75">75%</button>
+        <button class="preset-sz" data-scale="0.5">50%</button>
+        <button class="preset-sz" data-scale="0.25">25%</button>
+      </div>
+      <div class="ss-custom">
+        <input type="number" id="customW" placeholder="W" min="1"/>
+        <span>×</span>
+        <input type="number" id="customH" placeholder="H" min="1"/>
+        <button class="btn-xs" id="applyCustomSize">Apply</button>
+      </div>
+    </div>
+
+    <div class="ss-actions">
+      <button class="btn-send" id="ssSendBtn">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+        Send to LLM
+      </button>
+      <button class="btn-outline-sm" id="ssCopyBtn">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/></svg>
+        Copy
+      </button>
+    </div>
+
+    <!-- History strip inside ss-overlay -->
+    <div class="ss-hist-strip hidden" id="ssHistStrip">
+      <div class="ss-hist-label">History</div>
+      <div class="ss-hist-row" id="ssHistRow"></div>
+    </div>
+  </div>
+
+  <!-- Capturing spinner -->
+  <div class="capturing hidden" id="ssCapturing">
+    <div class="spinner"></div>
+    <span>Capturing…</span>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+</div>
+<script src="panel.js"></script>
+</body>
+</html>

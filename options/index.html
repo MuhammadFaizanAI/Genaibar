@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Genaibar — Settings</title>
+  <link rel="stylesheet" href="options.css"/>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-v"><img src="/icons/icon32.png" alt=""></div>
+      <div>
+        <div class="brand-name">Genaibar</div>
+        <div class="brand-ver">v1.0.0</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a class="nav-item active" data-section="llms">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-1a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v1h-3zM4.75 14.094A5.973 5.973 0 004 17v1H1v-1a3 3 0 013.75-2.906z"/></svg>
+        My LLMs
+      </a>
+      <a class="nav-item" data-section="prompts">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+        Prompt Library
+      </a>
+      <a class="nav-item" data-section="shortcuts">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.3 7.58H15.72c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h5.58c.39 0 .7.31.7.7s-.31.7-.7.7ZM6.42 7.58H2.7c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h3.72c.39 0 .7.31.7.7s-.32.7-.7.7ZM10.14 10.83a3.95 3.95 0 100-7.9 3.95 3.95 0 000 7.9ZM21.3 17.81h-3.72c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h3.72c.39 0 .7.31.7.7s-.31.7-.7.7ZM8.28 17.81H2.7c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h5.58c.39 0 .7.31.7.7s-.32.7-.7.7ZM13.86 21.07a3.95 3.95 0 100-7.9 3.95 3.95 0 000 7.9Z"/></svg>
+        Shortcuts
+      </a>
+      <a class="nav-item" data-section="appearance">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        Appearance
+      </a>
+      <a class="nav-item" data-section="about">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+        About
+      </a>
+    </nav>
+  </aside>
+
+  <main class="content">
+
+    <!-- MY LLMS -->
+    <section class="section" id="section-llms">
+      <div class="section-header"><h1>My LLMs</h1><p>Manage the AI assistants in your side panel.</p></div>
+      <div class="card">
+        <div class="card-hdr"><h2>Quick Add</h2></div>
+        <div class="presets" id="presets"></div>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><h2>Add Custom LLM</h2></div>
+        <form class="add-form" id="addForm">
+          <div class="form-row">
+            <div class="field"><label>Name</label><input type="text" id="newName" placeholder="e.g. Genaibar" maxlength="30" required/></div>
+            <div class="field flex2"><label>URL</label><input type="url" id="newUrl" placeholder="https://..." required/></div>
+            <div class="field fcolor"><label>Color</label><input type="color" id="newColor" value="#7c3aed"/></div>
+          </div>
+          <button type="submit" class="btn-primary">Add LLM</button>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><h2>Your LLMs</h2><span class="badge" id="llmCount">0</span></div>
+        <div id="llmList" class="item-list"></div>
+      </div>
+    </section>
+
+    <!-- PROMPTS -->
+    <section class="section hidden" id="section-prompts">
+      <div class="section-header"><h1>Prompt Library</h1><p>Save frequently-used prompts. Click any prompt in the panel to paste it directly into your active LLM.</p></div>
+      <div class="card">
+        <div class="card-hdr"><h2>Add Prompt</h2></div>
+        <form class="add-form" id="promptForm">
+          <div class="field"><label>Title</label><input type="text" id="promptTitle" placeholder="e.g. Summarise this page" maxlength="60" required/></div>
+          <div class="field"><label>Content</label><textarea id="promptContent" placeholder="Enter the full prompt text…" rows="4" required></textarea></div>
+          <button type="submit" class="btn-primary">Save Prompt</button>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><h2>Saved Prompts</h2><span class="badge" id="promptCount">0</span></div>
+        <div id="promptList" class="item-list"></div>
+      </div>
+    </section>
+
+    <!-- SHORTCUTS -->
+    <section class="section hidden" id="section-shortcuts">
+      <div class="section-header"><h1>Keyboard Shortcuts</h1><p>All shortcuts open the panel automatically and paste directly into the active LLM — no extra steps.</p></div>
+      <div class="card">
+        <div class="card-hdr"><h2>Status</h2><button class="btn-sm-out" id="checkShortcutsBtn">Check now</button></div>
+        <div class="shortcut-status" id="shortcutStatus">Click "Check now" to verify your shortcuts.</div>
+        <div id="shortcutList" class="shortcut-list"></div>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><h2>Reference</h2></div>
+        <table class="sc-table">
+          <thead><tr><th>Action</th><th>Default shortcut</th></tr></thead>
+          <tbody>
+            <tr><td>Screenshot → paste into LLM</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></td></tr>
+            <tr><td>Region screenshot → paste into LLM</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></td></tr>
+            <tr><td>Selected text → paste into LLM</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td></tr>
+          </tbody>
+        </table>
+        <p class="hint">To change shortcuts: <a class="hlink" id="scLink" href="#">chrome://extensions/shortcuts</a></p>
+      </div>
+    </section>
+
+    <!-- APPEARANCE -->
+    <section class="section hidden" id="section-appearance">
+      <div class="section-header"><h1>Appearance</h1><p>Customise how Genaibar behaves on your pages.</p></div>
+      <div class="card">
+        <div class="card-hdr"><h2>Floating Button</h2></div>
+        <div class="toggle-row">
+          <div>
+            <div class="toggle-label">Show floating "V" button on all pages</div>
+            <div class="toggle-sub">A small draggable button that opens the side panel instantly.</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="floatingBtnToggle" checked/>
+            <span class="toggle-knob"></span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section hidden" id="section-about">
+      <div class="section-header"><h1>About</h1></div>
+      <div class="card about-card">
+        <div class="about-v"><img src="/icons/icon48.png" alt=""></div>
+        <h2>Genaibar <div class="ver-tag">v1.0.0</div></h2>
+        <p>A production-ready Chrome extension that loads all your AI assistants in a persistent side panel — with direct screenshot &amp; text paste, session history, prompt library, keyboard shortcuts, and a floating quick-access button.</p>
+        <!-- <div class="phases">
+          <div class="phase done">Phase 1 — LLM Hub &amp; Side Panel ✓</div>
+          <div class="phase done">Phase 2 — Screenshot Tool &amp; History ✓</div>
+          <div class="phase done">Phase 3 — Direct Paste &amp; Smart Copy ✓</div>
+          <div class="phase done">Phase 4 — Prompt Library ✓</div>
+          <div class="phase done">Phase 5 — Floating Button &amp; Polish ✓</div>
+        </div> -->
+        <a class="gh-link" href="https://github.com" target="_blank">⭐ Star on GitHub</a>
+      </div>
+    </section>
+
+  </main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="options.js"></script>
+</body>
+</html>

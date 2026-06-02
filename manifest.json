@@ -1,0 +1,75 @@
+{
+  "manifest_version": 3,
+  "name": "Genaibar",
+  "version": "1.0.0",
+  "description": "All your AI assistants in one side panel — screenshot, smart copy, prompt library, and floating quick-access.",
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "declarativeNetRequest",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "clipboardRead"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "side_panel": {
+    "default_path": "panel/index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options/index.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-llm-paste.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-floating.js"],
+      "all_frames": false,
+      "run_at": "document_end"
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "strip_headers", "enabled": true, "path": "rules.json" }
+    ]
+  },
+  "action": {
+    "default_title": "Genaibar",
+    "default_icon": {
+      "16":  "icons/icon16.png",
+      "32":  "icons/icon32.png",
+      "48":  "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16":  "icons/icon16.png",
+    "32":  "icons/icon32.png",
+    "48":  "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "screenshot-tab": {
+      "suggested_key": { "default": "Alt+Shift+S" },
+      "description": "Screenshot current tab → paste into LLM"
+    },
+    "copy-selection": {
+      "suggested_key": { "default": "Alt+Shift+C" },
+      "description": "Send selected text → paste into LLM"
+    },
+    "region-screenshot": {
+      "suggested_key": { "default": "Alt+Shift+R" },
+      "description": "Select region → paste into LLM"
+    }
+  }
+}
