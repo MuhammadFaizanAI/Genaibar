@@ -45,7 +45,7 @@ async function pasteImage(dataUrl) {
   const el = findChatInput();
   if (!el) {
     // fallback — no identifiable input, nothing to do
-    console.warn('[Genaibar Hub] No chat input found for image paste.');
+    console.warn('[Genaibar] No chat input found for image paste.');
     return;
   }
 
