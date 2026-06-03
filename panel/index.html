@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Genaibar</title>
-  <link rel="stylesheet" href="panel.css" />
+  <link rel="stylesheet" href="panel.css"/>
 </head>
 <body>
 <div class="app">
@@ -14,14 +14,12 @@
     <div class="tabs-scroll" id="tabsScroll">
       <div class="tabs" id="tabs"></div>
     </div>
-
     <div class="topbar-actions">
-      <!-- Screenshot buttons -->
+      <!-- Screenshot -->
       <button class="icon-btn" id="screenshotBtn" title="Full screenshot (Alt+Shift+S)">
-        <svg viewBox="-2.4 -2.4 28.8 28.8" fill="currentColor">
-          <path d="M2,7V5A3,3,0,0,1,5,2H7A1,1,0,0,1,7,4H5A1,1,0,0,0,4,5V7A1,1,0,0,1,2,7ZM2,19a3,3,0,0,0,3,3H7a1,1,0,0,0,0-2H5a1,1,0,0,1-1-1V17a1,1,0,0,0-2,0Zm20-2a1,1,0,0,0-2,0v2a1,1,0,0,1-1,1H17a1,1,0,0,0,0,2h2a3,3,0,0,0,3-3ZM22,5a3,3,0,0,0-3-3H17a1,1,0,0,0,0,2h2a1,1,0,0,1,1,1V7a1,1,0,0,0,2,0Z"/>
-        </svg>
+        <svg viewBox="-2.4 -2.4 28.8 28.8" fill="currentColor"><path d="M2,7V5A3,3,0,0,1,5,2H7A1,1,0,0,1,7,4H5A1,1,0,0,0,4,5V7A1,1,0,0,1,2,7ZM2,19a3,3,0,0,0,3,3H7a1,1,0,0,0,0-2H5a1,1,0,0,1-1-1V17a1,1,0,0,0-2,0Zm20-2a1,1,0,0,0-2,0v2a1,1,0,0,1-1,1H17a1,1,0,0,0,0,2h2a3,3,0,0,0,3-3ZM22,5a3,3,0,0,0-3-3H17a1,1,0,0,0,0,2h2a1,1,0,0,1,1,1V7a1,1,0,0,0,2,0Z"/></svg>
       </button>
+      <!-- Region -->
       <button class="icon-btn" id="regionBtn" title="Region screenshot (Alt+Shift+R)">
         <svg viewBox="0 0 48 48" fill="currentColor">
           <path d="M26,39H22a1,1,0,0,1,0-2h4a1,1,0,0,1,0,2Z"/>
@@ -36,31 +34,28 @@
           <path d="M43,39H38a1,1,0,0,1,0-2h5a1,1,0,0,1,0,2Z"/>
         </svg>
       </button>
-
       <div class="topbar-divider"></div>
-
-      <!-- History — always visible -->
+      <!-- History (always visible) -->
       <button class="icon-btn" id="historyBtn" title="Session history">
         <svg viewBox="0 0 16 16" fill="currentColor">
           <path d="M3.05 4.75a.7.7 0 01.7-.7h3.5a.7.7 0 110 1.4h-3.5a.7.7 0 01-.7-.7zM3.75 7.05a.7.7 0 100 1.4h2.5a.7.7 0 100-1.4h-2.5z"/>
           <path fill-rule="evenodd" d="M0 3.25A2.25 2.25 0 012.25 1h6.5c.883 0 1.648.51 2.016 1.25h.984c.698 0 1.3.409 1.582 1h.918c.966 0 1.75.784 1.75 1.75v6a1.75 1.75 0 01-1.75 1.75h-.918c-.281.591-.884 1-1.582 1h-.984A2.25 2.25 0 018.75 15h-6.5A2.25 2.25 0 010 12.75v-9.5zm13.5 8h.75a.25.25 0 00.25-.25V5a.25.25 0 00-.25-.25h-.75v6.5zm-2.5 1v-8.5h.75A.25.25 0 0112 4v8a.25.25 0 01-.25.25H11zM2.25 2.5a.75.75 0 00-.75.75v9.5c0 .414.336.75.75.75h6.5a.75.75 0 00.75-.75v-9.5a.75.75 0 00-.75-.75h-6.5z" clip-rule="evenodd"/>
         </svg>
       </button>
-
-      <!-- Prompt library -->
+      <!-- Prompts -->
       <button class="icon-btn" id="promptsBtn" title="Prompt library">
         <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+          <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
         </svg>
       </button>
-
+      <!-- Help -->
+      <button class="icon-btn" id="helpBtn" title="Help & FAQ">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/></svg>
+      </button>
       <div class="topbar-divider"></div>
-
       <!-- Settings -->
       <button class="icon-btn" id="settingsBtn" title="Settings">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M21.3 7.58H15.72c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h5.58c.39 0 .7.31.7.7s-.31.7-.7.7ZM6.42 7.58H2.7c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h3.72c.39 0 .7.31.7.7s-.32.7-.7.7ZM10.14 10.83a3.95 3.95 0 100-7.9 3.95 3.95 0 000 7.9ZM21.3 17.81h-3.72c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h3.72c.39 0 .7.31.7.7s-.31.7-.7.7ZM8.28 17.81H2.7c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h5.58c.39 0 .7.31.7.7s-.32.7-.7.7ZM13.86 21.07a3.95 3.95 0 100-7.9 3.95 3.95 0 000 7.9Z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.3 7.58H15.72c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h5.58c.39 0 .7.31.7.7s-.31.7-.7.7ZM6.42 7.58H2.7c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h3.72c.39 0 .7.31.7.7s-.32.7-.7.7ZM10.14 10.83a3.95 3.95 0 100-7.9 3.95 3.95 0 000 7.9ZM21.3 17.81h-3.72c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h3.72c.39 0 .7.31.7.7s-.31.7-.7.7ZM8.28 17.81H2.7c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h5.58c.39 0 .7.31.7.7s-.32.7-.7.7ZM13.86 21.07a3.95 3.95 0 100-7.9 3.95 3.95 0 000 7.9Z"/></svg>
       </button>
     </div>
   </header>
@@ -69,10 +64,7 @@
   <div class="slide-panel hidden" id="historyPanel">
     <div class="slide-panel-header">
       <div class="slide-panel-title">
-        <svg viewBox="0 0 16 16" fill="currentColor" style="width:13px;height:13px">
-          <path d="M3.05 4.75a.7.7 0 01.7-.7h3.5a.7.7 0 110 1.4h-3.5a.7.7 0 01-.7-.7zM3.75 7.05a.7.7 0 100 1.4h2.5a.7.7 0 100-1.4h-2.5z"/>
-          <path fill-rule="evenodd" d="M0 3.25A2.25 2.25 0 012.25 1h6.5c.883 0 1.648.51 2.016 1.25h.984c.698 0 1.3.409 1.582 1h.918c.966 0 1.75.784 1.75 1.75v6a1.75 1.75 0 01-1.75 1.75h-.918c-.281.591-.884 1-1.582 1h-.984A2.25 2.25 0 018.75 15h-6.5A2.25 2.25 0 010 12.75v-9.5zm13.5 8h.75a.25.25 0 00.25-.25V5a.25.25 0 00-.25-.25h-.75v6.5zm-2.5 1v-8.5h.75A.25.25 0 0112 4v8a.25.25 0 01-.25.25H11zM2.25 2.5a.75.75 0 00-.75.75v9.5c0 .414.336.75.75.75h6.5a.75.75 0 00.75-.75v-9.5a.75.75 0 00-.75-.75h-6.5z" clip-rule="evenodd"/>
-        </svg>
+        <svg viewBox="0 0 16 16" fill="currentColor" style="width:12px;height:12px"><path d="M3.05 4.75a.7.7 0 01.7-.7h3.5a.7.7 0 110 1.4h-3.5a.7.7 0 01-.7-.7zM3.75 7.05a.7.7 0 100 1.4h2.5a.7.7 0 100-1.4h-2.5z"/><path fill-rule="evenodd" d="M0 3.25A2.25 2.25 0 012.25 1h6.5c.883 0 1.648.51 2.016 1.25h.984c.698 0 1.3.409 1.582 1h.918c.966 0 1.75.784 1.75 1.75v6a1.75 1.75 0 01-1.75 1.75h-.918c-.281.591-.884 1-1.582 1h-.984A2.25 2.25 0 018.75 15h-6.5A2.25 2.25 0 010 12.75v-9.5zm13.5 8h.75a.25.25 0 00.25-.25V5a.25.25 0 00-.25-.25h-.75v6.5zm-2.5 1v-8.5h.75A.25.25 0 0112 4v8a.25.25 0 01-.25.25H11zM2.25 2.5a.75.75 0 00-.75.75v9.5c0 .414.336.75.75.75h6.5a.75.75 0 00.75-.75v-9.5a.75.75 0 00-.75-.75h-6.5z" clip-rule="evenodd"/></svg>
         Session History
       </div>
       <div class="slide-panel-filters">
@@ -82,23 +74,70 @@
       </div>
       <button class="clear-btn" id="clearHistoryBtn">Clear</button>
     </div>
-    <div class="history-scroll" id="historyScroll">
-      <div class="history-content" id="historyContent"></div>
-    </div>
+    <div class="history-scroll"><div class="history-content" id="historyContent"></div></div>
   </div>
 
   <!-- ═══ PROMPTS PANEL ═══ -->
   <div class="slide-panel hidden" id="promptsPanel">
     <div class="slide-panel-header">
       <div class="slide-panel-title">
-        <svg viewBox="0 0 24 24" fill="currentColor" style="width:13px;height:13px">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
         Prompt Library
       </div>
       <button class="manage-btn" id="managePromptsBtn">+ Manage</button>
     </div>
     <div class="prompts-list" id="promptsList"></div>
+  </div>
+
+  <!-- ═══ HELP PANEL ═══ -->
+  <div class="slide-panel hidden" id="helpPanel">
+    <div class="slide-panel-header">
+      <div class="slide-panel-title">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+        Help & Troubleshooting
+      </div>
+    </div>
+    <div class="help-scroll">
+      <div class="help-content">
+        <div class="help-section">
+          <h3>🚀 Quick Start & Features</h3>
+          <p>Genaibar is built for maximum AI productivity. Master these features to speed up your workflow:</p>
+          <ul style="color:var(--text-2); font-size:12px; margin-top:10px; padding-left:18px; line-height:1.6">
+            <li style="margin-bottom:10px"><strong>Instant Switch:</strong> Click any AI tab at the top to jump between configured assistants without losing state.</li>
+            <li style="margin-bottom:10px"><strong>Full Capture (Alt+Shift+S):</strong> Instantly screenshot your entire current tab and upload it to the active AI.</li>
+            <li style="margin-bottom:10px"><strong>Precision Crop (Alt+Shift+R):</strong> Select exactly what you need by dragging a region over the page.</li>
+            <li style="margin-bottom:10px"><strong>Smart Copy (Alt+Shift+C):</strong> Highlight any text on the web to context-inject it directly into your AI chat.</li>
+            <li style="margin-bottom:10px"><strong>Prompt Library:</strong> Click the document icon to access your saved prompt templates for 1-click entries.</li>
+            <li style="margin-bottom:10px"><strong>Smart History:</strong> Access your last 40 screenshots and text snippets in the history panel for instant reuse.</li>
+          </ul>
+
+        </div>
+        <div class="help-section">
+          <h3>FAQs</h3>
+          <details>
+            <summary>Why does "Auto-paste" fail sometimes?</summary>
+            <p>AI sites like Claude or Gemini use advanced security that blocks "fake" pastes. Genaibar uses a <strong>Hidden File Input</strong> strategy to bypass this, but if it fails, the image is already on your clipboard—just press <strong>Ctrl+V</strong>.</p>
+          </details>
+          <details>
+            <summary>Can I use this on PDF pages?</summary>
+            <p>Yes, but with limits. Standard Chrome security blocks text selection on PDFs. Use the <strong>Screenshot Tool</strong> to capture PDF content visually.</p>
+          </details>
+        </div>
+        <div calass="help-section">
+          <h3>Common Errors</h3>
+          <div class="error-tip">
+            <strong>"Chat input not found"</strong>
+            <span>Reason: The site changed its layout or is still loading.</span>
+            <span>Fix: Wait 1 sec and try again, or click the chat box manually and paste.</span>
+          </div>
+          <div class="error-tip">
+            <strong>"Content Script Blocked"</strong>
+            <span>Reason: Some system pages (like chrome://) block all extensions.</span>
+            <span>Fix: Use Genaibar on standard websites only.</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ═══ IFRAME AREA ═══ -->
@@ -111,7 +150,7 @@
         </svg>
       </div>
       <p class="empty-title">No LLMs added yet</p>
-      <p class="empty-sub">Open Settings to add your first AI assistant</p>
+      <p class="empty-sub">Open Settings to add ChatGPT, Claude, Gemini, or any AI assistant.</p>
       <button class="btn-primary" id="emptySettingsBtn">Open Settings</button>
     </div>
 
@@ -124,10 +163,20 @@
           <path d="M8 8H5a1 1 0 00-1 1v11a1 1 0 001 1h11a1 1 0 001-1v-3" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
         <div class="paste-title" id="pasteTitle">Pasting…</div>
-        <div class="paste-sub">Or click the LLM input and press <kbd>Ctrl+V</kbd></div>
+        <div class="paste-sub">Or press <kbd>Ctrl+V</kbd> in the chat input</div>
         <div class="paste-track"><div class="paste-bar" id="pasteBar"></div></div>
         <div class="paste-dismiss">Click anywhere to dismiss</div>
       </div>
+    </div>
+
+    <!-- Error banner (above status bar) -->
+    <div class="error-banner hidden" id="errorBanner">
+      <span class="error-icon">⚠</span>
+      <div class="error-body">
+        <div class="error-msg" id="errorMsg"></div>
+        <div class="error-hint" id="errorHint"></div>
+      </div>
+      <button class="error-close" id="errorCloseBtn">✕</button>
     </div>
   </main>
 
@@ -140,18 +189,16 @@
     </button>
   </div>
 
-  <!-- ═══ SCREENSHOT OVERLAY (manual only) ═══ -->
+  <!-- ═══ SCREENSHOT OVERLAY ═══ -->
   <div class="ss-overlay hidden" id="ssOverlay">
     <div class="ss-header">
       <div class="ss-header-left">
-        <svg viewBox="-2.4 -2.4 28.8 28.8" fill="currentColor" style="width:14px;height:14px;color:#a78bfa">
-          <path d="M2,7V5A3,3,0,0,1,5,2H7A1,1,0,0,1,7,4H5A1,1,0,0,0,4,5V7A1,1,0,0,1,2,7ZM2,19a3,3,0,0,0,3,3H7a1,1,0,0,0,0-2H5a1,1,0,0,1-1-1V17a1,1,0,0,0-2,0Zm20-2a1,1,0,0,0-2,0v2a1,1,0,0,1-1,1H17a1,1,0,0,0,0,2h2a3,3,0,0,0,3-3ZM22,5a3,3,0,0,0-3-3H17a1,1,0,0,0,0,2h2a1,1,0,0,1,1,1V7a1,1,0,0,0,2,0Z"/>
-        </svg>
-        Screenshot
+        <svg viewBox="-2.4 -2.4 28.8 28.8" fill="currentColor" style="width:13px;height:13px;color:#a78bfa"><path d="M2,7V5A3,3,0,0,1,5,2H7A1,1,0,0,1,7,4H5A1,1,0,0,0,4,5V7A1,1,0,0,1,2,7ZM2,19a3,3,0,0,0,3,3H7a1,1,0,0,0,0-2H5a1,1,0,0,1-1-1V17a1,1,0,0,0-2,0Zm20-2a1,1,0,0,0-2,0v2a1,1,0,0,1-1,1H17a1,1,0,0,0,0,2h2a3,3,0,0,0,3-3ZM22,5a3,3,0,0,0-3-3H17a1,1,0,0,0,0,2h2a1,1,0,0,1,1,1V7a1,1,0,0,0,2,0Z"/></svg>
+        Screenshot Preview
         <span class="ss-badge" id="ssDimsBadge"></span>
       </div>
       <div class="ss-header-right">
-        <button class="icon-btn sm" id="ssRetakeBtn" title="Retake">
+        <button class="icon-btn sm" id="ssRetakeBtn" title="Retake screenshot">
           <svg viewBox="-2.4 -2.4 28.8 28.8" fill="currentColor"><path d="M2,7V5A3,3,0,0,1,5,2H7A1,1,0,0,1,7,4H5A1,1,0,0,0,4,5V7A1,1,0,0,1,2,7ZM2,19a3,3,0,0,0,3,3H7a1,1,0,0,0,0-2H5a1,1,0,0,1-1-1V17a1,1,0,0,0-2,0Zm20-2a1,1,0,0,0-2,0v2a1,1,0,0,1-1,1H17a1,1,0,0,0,0,2h2a3,3,0,0,0,3-3ZM22,5a3,3,0,0,0-3-3H17a1,1,0,0,0,0,2h2a1,1,0,0,1,1,1V7a1,1,0,0,0,2,0Z"/></svg>
         </button>
         <button class="icon-btn sm" id="ssHistBtn" title="History">
@@ -162,9 +209,7 @@
         </button>
       </div>
     </div>
-
     <div class="ss-preview"><img id="ssImage" src="" alt="Screenshot" draggable="false"/></div>
-
     <div class="ss-resize-row">
       <span class="ss-resize-label">Resize</span>
       <div class="ss-presets">
@@ -180,7 +225,6 @@
         <button class="btn-xs" id="applyCustomSize">Apply</button>
       </div>
     </div>
-
     <div class="ss-actions">
       <button class="btn-send" id="ssSendBtn">
         <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
@@ -191,8 +235,6 @@
         Copy
       </button>
     </div>
-
-    <!-- History strip inside ss-overlay -->
     <div class="ss-hist-strip hidden" id="ssHistStrip">
       <div class="ss-hist-label">History</div>
       <div class="ss-hist-row" id="ssHistRow"></div>
@@ -201,11 +243,9 @@
 
   <!-- Capturing spinner -->
   <div class="capturing hidden" id="ssCapturing">
-    <div class="spinner"></div>
-    <span>Capturing…</span>
+    <div class="spinner"></div><span>Capturing…</span>
   </div>
 
-  <!-- Toast -->
   <div class="toast" id="toast"></div>
 </div>
 <script src="panel.js"></script>

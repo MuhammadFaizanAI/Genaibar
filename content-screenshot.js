@@ -1,10 +1,10 @@
 (function () {
-  if (document.getElementById('__llmhub_overlay')) return;
+  if (document.getElementById('__genaibar_overlay')) return;
 
   const dpr = window.devicePixelRatio || 1;
 
   const overlay = document.createElement('div');
-  overlay.id = '__llmhub_overlay';
+  overlay.id = '__genaibar_overlay';
   overlay.style.cssText = `
     position:fixed;inset:0;z-index:2147483647;cursor:crosshair;
     background:rgba(0,0,0,0.35);user-select:none;

@@ -10,7 +10,7 @@
 <div class="page">
   <aside class="sidebar">
     <div class="brand">
-      <div class="brand-v"><img src="/icons/icon32.png" alt=""></div>
+      <img src="../icons/icon48.png" class="brand-logo" alt="Genaibar"/>
       <div>
         <div class="brand-name">Genaibar</div>
         <div class="brand-ver">v1.0.0</div>
@@ -22,16 +22,16 @@
         My LLMs
       </a>
       <a class="nav-item" data-section="prompts">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
         Prompt Library
       </a>
       <a class="nav-item" data-section="shortcuts">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.3 7.58H15.72c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h5.58c.39 0 .7.31.7.7s-.31.7-.7.7ZM6.42 7.58H2.7c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h3.72c.39 0 .7.31.7.7s-.32.7-.7.7ZM10.14 10.83a3.95 3.95 0 100-7.9 3.95 3.95 0 000 7.9ZM21.3 17.81h-3.72c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h3.72c.39 0 .7.31.7.7s-.31.7-.7.7ZM8.28 17.81H2.7c-.39 0-.7-.31-.7-.7s.31-.7.7-.7h5.58c.39 0 .7.31.7.7s-.32.7-.7.7ZM13.86 21.07a3.95 3.95 0 100-7.9 3.95 3.95 0 000 7.9Z"/></svg>
         Shortcuts
       </a>
-      <a class="nav-item" data-section="appearance">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-        Appearance
+      <a class="nav-item" data-section="feedback">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M20,16H5.17L4,17.17V4H20V16M11,5H13V11H11V5M11,13H13V15H11V13Z"/></svg>
+        Feedback
       </a>
       <a class="nav-item" data-section="about">
         <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
@@ -41,19 +41,15 @@
   </aside>
 
   <main class="content">
-
     <!-- MY LLMS -->
     <section class="section" id="section-llms">
-      <div class="section-header"><h1>My LLMs</h1><p>Manage the AI assistants in your side panel.</p></div>
-      <div class="card">
-        <div class="card-hdr"><h2>Quick Add</h2></div>
-        <div class="presets" id="presets"></div>
-      </div>
+      <div class="section-header"><h1>My LLMs</h1><p>Manage AI assistants in your Genaibar side panel.</p></div>
+      <div class="card"><div class="card-hdr"><h2>Quick Add</h2></div><div class="presets" id="presets"></div></div>
       <div class="card">
         <div class="card-hdr"><h2>Add Custom LLM</h2></div>
         <form class="add-form" id="addForm">
           <div class="form-row">
-            <div class="field"><label>Name</label><input type="text" id="newName" placeholder="e.g. Genaibar" maxlength="30" required/></div>
+            <div class="field"><label>Name</label><input type="text" id="newName" placeholder="e.g. VellumAI" maxlength="30" required/></div>
             <div class="field flex2"><label>URL</label><input type="url" id="newUrl" placeholder="https://..." required/></div>
             <div class="field fcolor"><label>Color</label><input type="color" id="newColor" value="#7c3aed"/></div>
           </div>
@@ -68,7 +64,7 @@
 
     <!-- PROMPTS -->
     <section class="section hidden" id="section-prompts">
-      <div class="section-header"><h1>Prompt Library</h1><p>Save frequently-used prompts. Click any prompt in the panel to paste it directly into your active LLM.</p></div>
+      <div class="section-header"><h1>Prompt Library</h1><p>Save prompts you use often. Click any prompt in the side panel to paste it instantly into your active LLM.</p></div>
       <div class="card">
         <div class="card-hdr"><h2>Add Prompt</h2></div>
         <form class="add-form" id="promptForm">
@@ -85,62 +81,93 @@
 
     <!-- SHORTCUTS -->
     <section class="section hidden" id="section-shortcuts">
-      <div class="section-header"><h1>Keyboard Shortcuts</h1><p>All shortcuts open the panel automatically and paste directly into the active LLM — no extra steps.</p></div>
+      <div class="section-header"><h1>Keyboard Shortcuts</h1><p>Manage your productivity triggers. All shortcuts automatically open Genaibar and context-inject into the active LLM.</p></div>
+      
       <div class="card">
-        <div class="card-hdr"><h2>Status</h2><button class="btn-sm-out" id="checkShortcutsBtn">Check now</button></div>
-        <div class="shortcut-status" id="shortcutStatus">Click "Check now" to verify your shortcuts.</div>
+        <div class="card-hdr">
+          <h2>Active Status</h2>
+          <button class="btn-sm-out" id="checkShortcutsBtn">Check for Conflicts</button>
+        </div>
+        <div class="shortcut-status" id="shortcutStatus">Verify your system shortcuts are active and not conflicted.</div>
         <div id="shortcutList" class="shortcut-list"></div>
       </div>
+
       <div class="card">
-        <div class="card-hdr"><h2>Reference</h2></div>
-        <table class="sc-table">
-          <thead><tr><th>Action</th><th>Default shortcut</th></tr></thead>
-          <tbody>
-            <tr><td>Screenshot → paste into LLM</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></td></tr>
-            <tr><td>Region screenshot → paste into LLM</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></td></tr>
-            <tr><td>Selected text → paste into LLM</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td></tr>
-          </tbody>
-        </table>
-        <p class="hint">To change shortcuts: <a class="hlink" id="scLink" href="#">chrome://extensions/shortcuts</a></p>
+        <div class="card-hdr"><h2>Shortcut Reference</h2></div>
+        <div class="table-wrapper">
+          <table class="sc-table">
+            <thead><tr><th>Feature</th><th>Default Key</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Open/Close Genaibar</strong></td><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd></td></tr>
+              <tr><td><strong>Capture Full Tab → Upload</strong></td><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></td></tr>
+              <tr><td><strong>Select Region → Upload</strong></td><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></td></tr>
+              <tr><td><strong>Copy Selection → Inject</strong></td><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <p class="hint">Customise these keys in Chrome Settings: <a class="hlink" id="scLink" href="#">chrome://extensions/shortcuts</a></p>
+        </div>
       </div>
     </section>
 
-    <!-- APPEARANCE -->
-    <section class="section hidden" id="section-appearance">
-      <div class="section-header"><h1>Appearance</h1><p>Customise how Genaibar behaves on your pages.</p></div>
+    <!-- FEEDBACK -->
+    <section class="section hidden" id="section-feedback">
+      <div class="section-header"><h1>Feedback</h1><p>Have a feature request or found a bug? Send a message directly to the developer.</p></div>
       <div class="card">
-        <div class="card-hdr"><h2>Floating Button</h2></div>
-        <div class="toggle-row">
-          <div>
-            <div class="toggle-label">Show floating "V" button on all pages</div>
-            <div class="toggle-sub">A small draggable button that opens the side panel instantly.</div>
-          </div>
-          <label class="toggle-switch">
-            <input type="checkbox" id="floatingBtnToggle" checked/>
-            <span class="toggle-knob"></span>
-          </label>
-        </div>
+        <div class="card-hdr"><h2>Send Feedback</h2></div>
+        <form class="add-form" id="feedbackForm">
+          <div class="field"><label>Subject</label><input type="text" id="fbSubject" placeholder="e.g. Bug on Claude.ai" required/></div>
+          <div class="field"><label>Message</label><textarea id="fbMessage" placeholder="Describe your feedback in detail…" rows="6" required></textarea></div>
+          <button type="submit" class="btn-primary">Send via Email</button>
+        </form>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section class="section hidden" id="section-about">
-      <div class="section-header"><h1>About</h1></div>
-      <div class="card about-card">
-        <div class="about-v"><img src="/icons/icon48.png" alt=""></div>
-        <h2>Genaibar <div class="ver-tag">v1.0.0</div></h2>
-        <p>A production-ready Chrome extension that loads all your AI assistants in a persistent side panel — with direct screenshot &amp; text paste, session history, prompt library, keyboard shortcuts, and a floating quick-access button.</p>
-        <!-- <div class="phases">
-          <div class="phase done">Phase 1 — LLM Hub &amp; Side Panel ✓</div>
-          <div class="phase done">Phase 2 — Screenshot Tool &amp; History ✓</div>
-          <div class="phase done">Phase 3 — Direct Paste &amp; Smart Copy ✓</div>
-          <div class="phase done">Phase 4 — Prompt Library ✓</div>
-          <div class="phase done">Phase 5 — Floating Button &amp; Polish ✓</div>
-        </div> -->
-        <a class="gh-link" href="https://github.com/MuhammadFaizanAI/Genaibar" target="_blank">⭐ Star on GitHub</a>
+      <div class="section-header"><h1>About Genaibar</h1></div>
+      <div class="card blog-card">
+        <article class="blog-post">
+          <header class="post-header">
+            <img src="../icons/icon128.png" class="post-logo" alt="Genaibar"/>
+            <div class="post-meta">
+              <h1>Genaibar: The Ultimate AI Sidebar</h1>
+              <div class="post-version">Version 1.0.0</div>
+            </div>
+            <a href="https://github.com/MuhammadFaizanAI" target="_blank" class="author-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21.03C9.5,20.81 9.5,20.24 9.5,19.5C6.71,20.1 6.12,18.15 6.12,18.15C5.66,17 5,16.7 5,16.7C4.09,16.07 5.07,16.08 5.07,16.08C6.08,16.15 6.61,17.12 6.61,17.12C7.5,18.65 8.95,18.2 9.53,17.93C9.62,17.28 9.88,16.84 10.17,16.59C7.94,16.31 5.6,15.45 5.6,11.59C5.6,10.5 6,9.6 6.65,8.9C6.55,8.65 6.2,7.63 6.75,6.28C6.75,6.28 7.6,6 9.53,7.3C10.33,7.1 11.2,7 12,7C12.8,7 13.67,7.1 14.47,7.3C16.4,6 17.25,6.28 17.25,6.28C17.8,7.63 17.45,8.65 17.35,8.9C18,9.6 18.4,10.5 18.4,11.59C18.4,15.46 16.06,16.3 13.82,16.56C14.18,16.88 14.5,17.5 14.5,18.45C14.5,19.81 14.5,20.9 14.5,21.23C14.5,21.47 14.66,21.75 15.17,21.65C19.14,20.31 22,16.56 22,12A10,10 0 0,0 12,2Z"/></svg>
+              Follow @MuhammadFaizanAI
+            </a>
+          </header>
+
+          <div class="post-content">
+            <p>Welcome to <strong>Genaibar</strong>, the industry-standard AI productivity tool designed by developers, for developers. In an era where switching tabs between ChatGPT, Claude, and Gemini kills your flow, Genaibar brings the power of all AI assistants into a single, persistent, and beautiful glassmorphic sidebar.</p>
+
+            <h3>Why Genaibar?</h3>
+            <p>Most AI extensions are slow, cluttered, or restricted. Genaibar is built with a <strong>Performance-First</strong> philosophy. Using our lazy-loading architecture, only the active LLM tab consumes resources, ensuring your browser stays fast even with 10+ assistants configured.</p>
+
+            <h3>Key Capabilities</h3>
+            <ul>
+              <li><strong>Advanced Auto-Upload:</strong> Our proprietary "Hidden File Input" strategy allows seamless screenshot uploads to Claude.ai and Gemini, bypassing modern security frameworks that block standard pasting.</li>
+              <li><strong>Visual Precision:</strong> Capture high-resolution full-tab screenshots or use the regional crop tool (<code>Alt+Shift+R</code>) for focused analysis.</li>
+              <li><strong>Smart Selection:</strong> Select text on any webpage and press <code>Alt+Shift+C</code> to instantly context-inject it into your chat.</li>
+              <li><strong>Glassmorphic UI:</strong> A modern, Apple-inspired interface that feels native to your operating system.</li>
+            </ul>
+
+            <h3>Where it "Lags" (Honest Engineering)</h3>
+            <p>We believe in transparency. Genaibar is powerful, but it faces standard browser security boundaries:</p>
+            <ul>
+              <li><strong>PDF Restrictions:</strong> Chrome's built-in PDF viewer is a restricted environment. Content scripts cannot read PDF text directly. Use the Genaibar Screenshot tool to capture PDF content visually instead.</li>
+              <li><strong>System Pages:</strong> For your security, Chrome blocks extensions on <code>chrome://</code> pages and the Web Store.</li>
+              <li><strong>Site Layout Changes:</strong> AI platforms update their code weekly. If a chat input isn't detected, use the <strong>Reload</strong> button or fallback to manual <code>Ctrl+V</code>.</li>
+            </ul>
+
+            <p class="post-footer">Developed with passion by <strong>Muhammad Faizan</strong>. Check out the source code and contribute on <a href="https://github.com/MuhammadFaizanAI/Genaibar" target="_blank">GitHub</a>.</p>
+          </div>
+        </article>
       </div>
     </section>
-
   </main>
 </div>
 <div id="toast" class="toast"></div>

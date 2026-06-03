@@ -1,41 +1,72 @@
-# Genaibar — Chrome Extension
+# Genaibar 🚀
 
-One-click access to all your AI assistants in a persistent Chrome side panel.
+**The World's Fastest AI Sidebar Browser.**  
+*Unify your AI workflow. One panel. No distractions.*
 
-## How to Install (Developer Mode)
+[![Version](https://img.shields.io/badge/Version-1.0.0-green.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-purple.svg)]()
 
-1. Open Chrome and go to `chrome://extensions`
-2. Toggle **Developer mode** ON (top-right switch)
-3. Click **Load unpacked**
-4. Select the `extension/` folder from this project
-5. The LLM Hub icon appears in your Chrome toolbar
-6. Click it to open the side panel
+Genaibar is a high-performance Chrome extension designed for power users who rely on multiple AI assistants. It provides a persistent, glassmorphic sidebar that allows you to switch between ChatGPT, Claude, Gemini, and others instantly—without ever leaving your current tab.
 
-## Phase 1 Features
+---
 
-- **Side panel** — persistent panel that stays open as you browse
-- **LLM switcher** — icon bar to jump between ChatGPT, Claude, Gemini, and more
-- **Add/remove LLMs** — configure any AI website via Settings
-- **X-Frame bypass** — strips headers so LLM sites load inside the panel
-- **Open in tab** — launch the active LLM in a full tab from the status bar
-- **Keyboard shortcuts** — `Alt+Shift+L` opens the panel
+## ✨ Key Features
 
-## Default LLMs
+- **🚀 Lazy-Loading Architecture:** Only the active AI assistant consumes memory. Open 10+ tabs without slowing down your browser.
+- **🖼️ Smart Screenshot Suite:** Capture full tabs or specific regions (`Alt+Shift+R`) and have them automatically uploaded to your chat.
+- **📋 Instant Smart Copy:** Select any text and press `Alt+Shift+C` to send it directly into the active LLM.
+- **🤖 Advanced Auto-Upload:** Proprietary "Hidden File Input" strategy for Claude.ai and Gemini to bypass security blocks and framework restrictions.
+- **✨ Glassmorphism UI:** A beautiful, modern interface with real-time blur and fluid animations.
+- **🔄 Fast Refresh:** One-click "Soft Reload" to unstick AI sites without losing your context.
+- **📁 Unique Image Naming:** Automatically generates unique high-res filenames to prevent Gemini/AI image deduplication issues.
+...
+---
 
-- ChatGPT (https://chat.openai.com)
-- Claude (https://claude.ai)
-- Gemini (https://gemini.google.com)
+## 🛠 Installation (Developer Mode)
 
-## Add More LLMs
+1.  **Download:** Clone this repository or download the ZIP folder.
+2.  **Unpack:** Extract the files to a folder on your computer.
+3.  **Configure:** 
+    - Copy `config.template.js` to `config.js`.
+    - Edit `config.js` and add your personal configuration (e.g., feedback email).
+    - Note: `config.js` is ignored by git and will not be committed.
+4.  **Chrome Extensions:** Open Chrome and navigate to `chrome://extensions`.
+5.  **Developer Mode:** Enable **Developer mode** (top-right toggle).
+6.  **Load Unpacked:** Click **Load unpacked** and select the `genaibar-extension/` folder.
+7.  **Pin:** Pin Genaibar to your toolbar for instant access.
 
-Click the **+** button or the **gear icon** in the panel to open Settings, then use Quick Add to add Perplexity, Grok, Copilot, Mistral, Meta AI, or any custom URL.
+---
+...
 
-## Keyboard Shortcuts
+## ⌨️ Pro Shortcuts
 
 | Shortcut | Action |
-|---|---|
-| `Alt+Shift+L` | Open/close panel |
-| `Alt+Shift+S` | Screenshot tab (Phase 2) |
-| `Alt+Shift+C` | Copy selection to LLM (Phase 3) |
+| :--- | :--- |
+| `Alt+Shift+L` | Open / Close Sidebar |
+| `Alt+Shift+S` | Capture Full Tab → Upload |
+| `Alt+Shift+R` | Select Region → Upload |
+| `Alt+Shift+C` | Copy Selection → Send |
 
-Customize shortcuts at `chrome://extensions/shortcuts`.
+---
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+*Built with ❤️ for the AI community.*
