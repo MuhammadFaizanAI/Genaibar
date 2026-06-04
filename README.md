@@ -3,8 +3,10 @@
 **The World's Fastest AI Sidebar Browser.**  
 *Unify your AI workflow. One panel. No distractions.*
 
-[![Version](https://img.shields.io/badge/Version-1.0.0-green.svg)]()
-[![License](https://img.shields.io/badge/License-MIT-purple.svg)]()
+![GitHub release](https://img.shields.io/github/v/release/MuhammadFaizanAI/Genaibar?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/MuhammadFaizanAI/Genaibar?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/MuhammadFaizanAI/Genaibar?style=flat-square)
+![License](https://img.shields.io/github/license/MuhammadFaizanAI/Genaibar?style=flat-square)
 
 Genaibar is a high-performance Chrome extension designed for power users who rely on multiple AI assistants. It provides a persistent, glassmorphic sidebar that allows you to switch between ChatGPT, Claude, Gemini, and others instantly—without ever leaving your current tab.
 
@@ -21,10 +23,19 @@ Genaibar is a high-performance Chrome extension designed for power users who rel
 - **Unique Image Naming:** Automatically generates unique high-res filenames to prevent Gemini/AI image deduplication issues.
 ...
 ---
+## Browsers Support
+![Chrome](https://img.shields.io/badge/Chrome-4285F4?style=flat-square&logo=google-chrome&logoColor=white)
+![Brave](https://img.shields.io/badge/Brave-FB542B?style=flat-square&logo=brave&logoColor=white)
+![Edge](https://img.shields.io/badge/Edge-0078D7?style=flat-square&logo=microsoft-edge&logoColor=white)
+![Opera](https://img.shields.io/badge/Opera-FF1B2D?style=flat-square&logo=opera&logoColor=white)
+![Vivaldi](https://img.shields.io/badge/Vivaldi-EF3939?style=flat-square&logo=vivaldi&logoColor=white)
+![Arc](https://img.shields.io/badge/Arc-FCBFBD?style=flat-square&logo=arc&logoColor=black)
+*Allmost the Chromium Based Browers*
+---
 
 ## Installation (Developer Mode)
 
-1.  **Download:** Clone this repository or download the ZIP folder.
+1.  **Download:** Download the ZIP folder [![Download](https://img.shields.io/github/v/release/MuhammadFaizanAI/Genaibar?label=Download&style=flat-square&logo=google-chrome&logoColor=white&color=4285F4)](https://github.com/MuhammadFaizanAI/Genaibar/releases/latest/download/genaibar-v1.0.0.zip)
 2.  **Unpack:** Extract the files to a folder on your computer.
 3.  **Configure:** 
     - Copy `config.template.js` to `config.js`.
