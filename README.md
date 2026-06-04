@@ -1,5 +1,5 @@
 # Genaibar
-**The World's Fastest AI Sidebar for Your Browser.**  
+**The Fastest AI Sidebar for Your Browser.**  
 *Unify your AI workflow. One panel. No distractions.*
 
 ![Version](https://img.shields.io/badge/Version-v1.0.0-blue?style=flat-square) ![Stars](https://img.shields.io/badge/Stars-⭐_0-yellow?style=flat-square) ![Issues](https://img.shields.io/badge/Issues-0_open-green?style=flat-square) ![License](https://img.shields.io/badge/License-MIT-orange?style=flat-square)
