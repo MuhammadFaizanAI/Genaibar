@@ -18,8 +18,7 @@ Genaibar is a high-performance Chrome extension designed for power users who rel
 - **Glassmorphism UI:** A beautiful, modern interface with real-time blur and fluid animations.
 - **Fast Refresh:** One-click "Soft Reload" to unstick AI sites without losing your context.
 - **Unique Image Naming:** Automatically generates unique high-res filenames to prevent Gemini/AI image deduplication issues.
-...
----
+
 ## Browsers Support
 ![Chrome](https://img.shields.io/badge/Chrome-4285F4?style=flat-square&logo=google-chrome&logoColor=white)
 ![Brave](https://img.shields.io/badge/Brave-FB542B?style=flat-square&logo=brave&logoColor=white)
