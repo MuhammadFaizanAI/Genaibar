@@ -3,10 +3,7 @@
 **The World's Fastest AI Sidebar Browser.**  
 *Unify your AI workflow. One panel. No distractions.*
 
-![GitHub release](https://img.shields.io/github/v/release/MuhammadFaizanAI/Genaibar?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/MuhammadFaizanAI/Genaibar?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/MuhammadFaizanAI/Genaibar?style=flat-square)
-![License](https://img.shields.io/github/license/MuhammadFaizanAI/Genaibar?style=flat-square)
+![Version](https://img.shields.io/badge/Version-v1.0.0-blue?style=flat-square)  ![Stars](https://img.shields.io/badge/Stars-⭐_0-yellow?style=flat-square)  ![Issues](https://img.shields.io/badge/Issues-0_open-green?style=flat-square)  ![License](https://img.shields.io/badge/License-MIT-orange?style=flat-square)
 
 Genaibar is a high-performance Chrome extension designed for power users who rely on multiple AI assistants. It provides a persistent, glassmorphic sidebar that allows you to switch between ChatGPT, Claude, Gemini, and others instantly—without ever leaving your current tab.
 
@@ -35,7 +32,7 @@ Genaibar is a high-performance Chrome extension designed for power users who rel
 
 ## Installation (Developer Mode)
 
-1.  **Download:** Download the ZIP folder [![Download](https://img.shields.io/github/v/release/MuhammadFaizanAI/Genaibar?label=Download&style=flat-square&logo=google-chrome&logoColor=white&color=4285F4)](https://github.com/MuhammadFaizanAI/Genaibar/releases/latest/download/genaibar-v1.0.0.zip)
+1.  **Download:** Download the ZIP folder [![Download](https://img.shields.io/badge/Download-genaibar--v1.0.0-4285F4?style=flat-square&logo=google-chrome&logoColor=white)](https://github.com/MuhammadFaizanAI/Genaibar/releases/latest/download/genaibar-v1.0.0.zip)
 2.  **Unpack:** Extract the files to a folder on your computer.
 3.  **Configure:** 
     - Copy `config.template.js` to `config.js`.
