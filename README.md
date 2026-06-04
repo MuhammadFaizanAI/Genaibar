@@ -8,6 +8,12 @@ Genaibar is a high-performance Chrome extension designed for power users who rel
 
 ---
 
+## Demo
+
+<video src="https://github.com/user-attachments/assets/ff86abe4-c523-4f85-8f1f-1173c7e6f689" autoplay loop muted playsinline controls width="100%"></video>
+
+---
+
 ## Features
 
 - **Lazy-loading architecture** — Only the active AI assistant consumes memory. Open 10+ tabs without slowing down your browser.
