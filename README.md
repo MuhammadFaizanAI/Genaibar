@@ -1,79 +1,83 @@
-# Genaibar 
-
-**The World's Fastest AI Sidebar Browser.**  
+# Genaibar
+**The World's Fastest AI Sidebar for Your Browser.**  
 *Unify your AI workflow. One panel. No distractions.*
 
-![Version](https://img.shields.io/badge/Version-v1.0.0-blue?style=flat-square)  ![Stars](https://img.shields.io/badge/Stars-⭐_0-yellow?style=flat-square)  ![Issues](https://img.shields.io/badge/Issues-0_open-green?style=flat-square)  ![License](https://img.shields.io/badge/License-MIT-orange?style=flat-square)
+![Version](https://img.shields.io/badge/Version-v1.0.0-blue?style=flat-square) ![Stars](https://img.shields.io/badge/Stars-⭐_0-yellow?style=flat-square) ![Issues](https://img.shields.io/badge/Issues-0_open-green?style=flat-square) ![License](https://img.shields.io/badge/License-MIT-orange?style=flat-square)
 
-Genaibar is a high-performance Chrome extension designed for power users who rely on multiple AI assistants. It provides a persistent, glassmorphic sidebar that allows you to switch between ChatGPT, Claude, Gemini, and others instantly—without ever leaving your current tab.
+Genaibar is a high-performance Chrome extension designed for power users who rely on multiple AI assistants. It provides a persistent, glassmorphic sidebar that lets you switch between ChatGPT, Claude, Gemini, and others instantly — without ever leaving your current tab.
 
 ---
 
-## Key Features
+## Features
 
-- **Lazy-Loading Architecture:** Only the active AI assistant consumes memory. Open 10+ tabs without slowing down your browser.
-- **Smart Screenshot Suite:** Capture full tabs or specific regions (`Alt+Shift+R`) and have them automatically uploaded to your chat.
-- **Instant Smart Copy:** Select any text and press `Alt+Shift+C` to send it directly into the active LLM.
-- **Advanced Auto-Upload:** Proprietary "Hidden File Input" strategy for Claude.ai and Gemini to bypass security blocks and framework restrictions.
-- **Glassmorphism UI:** A beautiful, modern interface with real-time blur and fluid animations.
-- **Fast Refresh:** One-click "Soft Reload" to unstick AI sites without losing your context.
-- **Unique Image Naming:** Automatically generates unique high-res filenames to prevent Gemini/AI image deduplication issues.
+- **Lazy-loading architecture** — Only the active AI assistant consumes memory. Open 10+ tabs without slowing down your browser.
+- **Smart screenshot suite** — Capture full tabs or specific regions (`Alt+Shift+R`) and have them automatically uploaded to your chat.
+- **Instant smart copy** — Select any text and press `Alt+Shift+C` to send it directly into the active assistant.
+- **Advanced auto-upload** — Proprietary hidden file input strategy for Claude.ai and Gemini to bypass security blocks and framework restrictions.
+- **Glassmorphism UI** — A modern interface with real-time blur and fluid animations.
+- **Fast refresh** — One-click soft reload to unstick AI sites without losing your context.
+- **Unique image naming** — Automatically generates unique filenames to prevent Gemini and AI image deduplication issues.
 
-## Browsers Support
+---
+
+## Browser support
+
 ![Chrome](https://img.shields.io/badge/Chrome-4285F4?style=flat-square&logo=google-chrome&logoColor=white)
 ![Brave](https://img.shields.io/badge/Brave-FB542B?style=flat-square&logo=brave&logoColor=white)
 ![Edge](https://img.shields.io/badge/Edge-0078D7?style=flat-square&logo=microsoft-edge&logoColor=white)
 ![Opera](https://img.shields.io/badge/Opera-FF1B2D?style=flat-square&logo=opera&logoColor=white)
 ![Vivaldi](https://img.shields.io/badge/Vivaldi-EF3939?style=flat-square&logo=vivaldi&logoColor=white)
 ![Arc](https://img.shields.io/badge/Arc-FCBFBD?style=flat-square&logo=arc&logoColor=black)
-*Allmost the Chromium Based Browers*
----
 
-## Installation (Developer Mode)
-
-1.  **Download:** Download the ZIP folder [![Download](https://img.shields.io/badge/Download-genaibar--v1.0.0-4285F4?style=flat-square&logo=google-chrome&logoColor=white)](https://github.com/MuhammadFaizanAI/Genaibar/releases/latest/download/genaibar-v1.0.0.zip)
-2.  **Unpack:** Extract the files to a folder on your computer.
-3.  **Configure:** 
-    - Copy `config.template.js` to `config.js`.
-    - Edit `config.js` and add your personal configuration (e.g., feedback email).
-    - Note: `config.js` is ignored by git and will not be committed.
-4.  **Chrome Extensions:** Open Chrome and navigate to `chrome://extensions`.
-5.  **Developer Mode:** Enable **Developer mode** (top-right toggle).
-6.  **Load Unpacked:** Click **Load unpacked** and select the `genaibar-extension/` folder.
-7.  **Pin:** Pin Genaibar to your toolbar for instant access.
+Works on all Chromium-based browsers.
 
 ---
-...
 
-## Pro Shortcuts
+## Installation
+
+1. **Download** the extension ZIP
+
+   [![Download](https://img.shields.io/badge/Download-genaibar--v1.0.0-4285F4?style=flat-square&logo=google-chrome&logoColor=white)](https://github.com/MuhammadFaizanAI/Genaibar/releases/latest/download/genaibar-v1.0.0.zip)
+
+2. **Extract** the ZIP to a folder on your computer.
+
+3. **Open** Chrome and go to `chrome://extensions`.
+
+4. **Enable** Developer mode using the toggle in the top-right corner.
+
+5. **Click** Load unpacked and select the extracted folder.
+
+6. **Pin** Genaibar to your toolbar for instant access.
+
+---
+
+## Shortcuts
 
 | Shortcut | Action |
 | :--- | :--- |
-| `Alt+Shift+L` | Open / Close Sidebar |
-| `Alt+Shift+S` | Capture Full Tab → Upload |
-| `Alt+Shift+R` | Select Region → Upload |
-| `Alt+Shift+C` | Copy Selection → Send |
+| `Alt+Shift+L` | Open / close sidebar |
+| `Alt+Shift+S` | Capture full tab and upload |
+| `Alt+Shift+R` | Select region and upload |
+| `Alt+Shift+C` | Copy selection and send |
 
 ---
 
 ## Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are welcome and appreciated. If you have a suggestion or found a bug, feel free to open an issue or submit a pull request.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork the repo
+2. Create your branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add your feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a pull request
 
 ---
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE` for details.
 
 ---
 
-*Built with ❤️ for the AI community.*
+*Built for the AI community.*
